@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title><%= htmlWebpackPlugin.options.title %></title>
+	</head>
+	<body>
+		<div class="ui">
+			<h4 class="ui__title">Configuration</h4>
+			<div class="ui__group">
+				<label>L-System</label>
+				<select id="uiLsystem">
+					<option value="" selected>-</option>
+					<option value="koch_snowflake">Koch Snowflake</option>
+					<option value="koch_curve">Koch Curve</option>
+					<option value="hexa_flake">Hexa Flake</option>
+					<option value="plant">Plant</option>
+				</select>
+			</div>
+			<div class="ui__group">
+					<label>Iterations</label>
+					<input id="uiParamIt" type="number" min="0">
+			</div>
+			<div class="ui__group">
+					<label>Angle</label>
+					<input id="uiParamAngle" type="number" min="0" max="360">
+			</div>
+		</div>
+	</body>
+</html>
