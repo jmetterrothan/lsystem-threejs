@@ -27,10 +27,16 @@ const updateScene = () => {
     const funcName = $uiSelector.value;
 
     if (data[funcName]) {
-        const object = lsystemState.create(funcName, n, angle);
+        const line = lsystemState.create(funcName, n, angle);
+        line.geometry.computeBoundingSphere();
 
+        // readjust camera target position
+        const position = line.geometry.boundingSphere.center;
+        scene.controls.target.set(position.x, position.y, position.z);
+
+        // add to scene
         lsystemState.wrapper.clean();
-        lsystemState.scene.add(object);
+        lsystemState.scene.add(line);
     }
 };
 

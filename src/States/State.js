@@ -4,7 +4,6 @@ class State
         this.wrapper = sceneWrapper;
         this.scene = sceneWrapper.scene;
     }
-
     init() { }
     update() { }
     onResize(w, h) { }
